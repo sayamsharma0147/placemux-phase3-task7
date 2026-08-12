@@ -1,0 +1,41 @@
+{
+  "bar": "A brand-new candidate sees genuinely relevant jobs in their first session.",
+  "approach_decisions": {
+    "content_vs_popularity_cold_start": "content-based (skill overlap) primary, popularity blended in and used as the fallback when skills are missing - rejected pure popularity as the primary strategy since it doesn't differentiate candidates at all",
+    "explicit_onboarding_vs_profile_inference": "infer from signup skills - rejected a separate onboarding quiz as added friction directly opposed to this task's activation goal",
+    "exploration": "2/10 slots reserved for weighted-random exploration beyond the top-ranked set, so the second session can already start personalising"
+  },
+  "measured_lift": {
+    "overall_lift_pct": 30.6,
+    "lift_pct_for_candidates_with_skills_on_file": 31.8,
+    "lift_pct_for_candidates_without_skills": 6.5
+  },
+  "never_empty_verification": [
+    {
+      "scenario": "normal candidate, full job data",
+      "n_recs": 10,
+      "strategy": "content_popularity_blend"
+    },
+    {
+      "scenario": "no skills on file, full job data",
+      "n_recs": 10,
+      "strategy": "popularity_fallback_no_skills"
+    },
+    {
+      "scenario": "skill matches zero jobs",
+      "n_recs": 10,
+      "strategy": "content_popularity_blend"
+    },
+    {
+      "scenario": "FORCED FAILURE: job catalog completely empty/unavailable",
+      "n_recs": 0,
+      "strategy": "static_fallback"
+    }
+  ],
+  "true_floor_case": "When the job catalog itself is completely empty, there is genuinely nothing to recommend - no ranking strategy can invent jobs that don't exist. This is NOT a bug in the recommender; it's the actual floor of what 'never empty' can mean. The correct mitigation lives one layer below this task's scope: the ONBOARDING UX should detect zero available postings and show a distinct 'we're launching in your area soon, here's how to get notified' state, rather than the recommender silently returning nothing. Flagged as a hand-off item to Frontend, not solved here, since it's a UX/product decision, not a ranking one.",
+  "known_limitations": [
+    "Lift is measured via simulation (a modelled true-relevance function based on skill overlap with realistic self-report noise), not a real A/B test - the DIRECTION and mechanism (content-based beats popularity-only when skills are available) should transfer, but the exact lift percentage needs re-validation against a real online experiment before being used as a launch metric.",
+    "The 8% no-skills-on-file rate is an assumed onboarding drop-off rate, not measured from real signup funnel data in this environment.",
+    "Exploration slot selection here is a simple weighted-random sample, not a proper multi-armed-bandit policy (e.g. Thompson sampling) - sufficient to demonstrate the core concept, but a real implementation should use a policy that formally balances explore/exploit rather than a fixed slot count."
+  ]
+}

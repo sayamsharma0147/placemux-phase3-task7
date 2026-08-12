@@ -1,0 +1,147 @@
+{
+  "new_account_skills_entered_at_signup": [
+    "python",
+    "machine_learning",
+    "statistics"
+  ],
+  "strategy_used": "content_popularity_blend",
+  "explanation_shown_to_user": "Ranked primarily by overlap with your listed skills (python, machine_learning, statistics), blended with a popularity signal.",
+  "recommendations": [
+    {
+      "job_id": "job_599",
+      "required_skills": [
+        "python",
+        "statistics",
+        "machine_learning"
+      ],
+      "content_score": 1.0,
+      "popularity_norm": 0.25391685415064674,
+      "blended_score": 0.776175056245194,
+      "position": 1,
+      "is_exploration_slot": false
+    },
+    {
+      "job_id": "job_310",
+      "required_skills": [
+        "python",
+        "machine_learning",
+        "statistics"
+      ],
+      "content_score": 1.0,
+      "popularity_norm": 0.019973345624558284,
+      "blended_score": 0.7059920036873675,
+      "position": 2,
+      "is_exploration_slot": false
+    },
+    {
+      "job_id": "job_13",
+      "required_skills": [
+        "python",
+        "statistics",
+        "sql",
+        "machine_learning"
+      ],
+      "content_score": 0.75,
+      "popularity_norm": 0.21738384778011843,
+      "blended_score": 0.5902151543340355,
+      "position": 3,
+      "is_exploration_slot": false
+    },
+    {
+      "job_id": "job_395",
+      "required_skills": [
+        "communication",
+        "machine_learning",
+        "python",
+        "sql"
+      ],
+      "content_score": 0.4,
+      "popularity_norm": 1.0,
+      "blended_score": 0.58,
+      "position": 4,
+      "is_exploration_slot": false
+    },
+    {
+      "job_id": "job_503",
+      "required_skills": [
+        "statistics",
+        "python",
+        "sql",
+        "machine_learning"
+      ],
+      "content_score": 0.75,
+      "popularity_norm": 0.0933703223943086,
+      "blended_score": 0.5530110967182925,
+      "position": 5,
+      "is_exploration_slot": false
+    },
+    {
+      "job_id": "job_359",
+      "required_skills": [
+        "python",
+        "machine_learning",
+        "statistics",
+        "problem_solving"
+      ],
+      "content_score": 0.75,
+      "popularity_norm": 0.03139421259940262,
+      "blended_score": 0.5344182637798207,
+      "position": 6,
+      "is_exploration_slot": false
+    },
+    {
+      "job_id": "job_145",
+      "required_skills": [
+        "statistics",
+        "python",
+        "machine_learning",
+        "communication"
+      ],
+      "content_score": 0.75,
+      "popularity_norm": 0.02354090391338769,
+      "blended_score": 0.5320622711740162,
+      "position": 7,
+      "is_exploration_slot": false
+    },
+    {
+      "job_id": "job_347",
+      "required_skills": [
+        "deep_learning",
+        "machine_learning",
+        "python",
+        "statistics"
+      ],
+      "content_score": 0.75,
+      "popularity_norm": 0.023264528698963626,
+      "blended_score": 0.531979358609689,
+      "position": 8,
+      "is_exploration_slot": false
+    },
+    {
+      "job_id": "job_197",
+      "required_skills": [
+        "sql",
+        "statistics"
+      ],
+      "content_score": 0.25,
+      "popularity_norm": 0.004903391967705879,
+      "blended_score": 0.17647101759031175,
+      "position": 9,
+      "is_exploration_slot": true
+    },
+    {
+      "job_id": "job_23",
+      "required_skills": [
+        "data_analysis",
+        "python",
+        "sql",
+        "statistics"
+      ],
+      "content_score": 0.4,
+      "popularity_norm": 0.0015147872242255473,
+      "blended_score": 0.2804544361672676,
+      "position": 10,
+      "is_exploration_slot": true
+    }
+  ]
+}
